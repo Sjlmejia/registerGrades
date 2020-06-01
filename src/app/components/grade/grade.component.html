@@ -1,0 +1,11 @@
+<form [formGroup]="form" (submit) = "onSaveGrade()" class="form">
+  <mat-form-field>
+    <input matInput placeholder="Deberes" formControlName="task" autocomplete="off">
+    <mat-error *ngIf="form.get('task').invalid">Por favor ingrese la calificacion</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Examenes" formControlName="test" autocomplete="off">
+      <mat-error *ngIf="form.get('test').invalid">Por favor ingrese la calificacion</mat-error>
+  </mat-form-field>
+  <button class="save" mat-stroked-button type="submit">Guardar Calificacion</button>
+</form>

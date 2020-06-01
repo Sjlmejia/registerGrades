@@ -1,0 +1,35 @@
+
+<div class="container-cards">
+  <mat-card class="card">
+    <h3 class="title">{{titleAproved}}</h3>
+    <div  *ngIf="approved && approved.length > 0">
+      <div *ngFor="let student of approved" class="container">
+        <div class="content">{{student.firstName}}</div>
+        <div class="content">{{student.lastName}}</div>
+      </div>
+    </div>
+    <div *ngIf="approved && approved.length === 0"> {{msgAproved}}</div>
+  </mat-card>
+
+  <mat-card class="card">
+    <h3 class="title">{{titleReprobate}}</h3>
+    <div *ngIf="reprobate && reprobate.length > 0">
+      <div *ngFor="let student of reprobate" class="container">
+        <div class="content">{{student.firstName}}</div>
+        <div class="content">{{student.lastName}}</div>
+      </div>
+    </div>
+    <div *ngIf="reprobate && reprobate.length === 0">{{msgReprobate}}</div>
+  </mat-card>
+
+  <mat-card class="card">
+    <h3 class="title">{{titlePending}}</h3>
+    <div  *ngIf="pendings && pendings.length > 0">
+      <div *ngFor="let student of pendings" class="container">
+      <div class="content">{{student.firstName}}</div>
+      <div class="content">{{student.lastName}}</div>
+    </div>
+    </div>
+    <div *ngIf="pendings && pendings.length === 0">{{msgPending}}}</div>
+  </mat-card>
+</div>

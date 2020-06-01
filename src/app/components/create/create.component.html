@@ -1,0 +1,11 @@
+<form [formGroup]="form" (submit) = "onSaveStudent()" class="form">
+  <mat-form-field>
+    <input matInput placeholder="Nombres" formControlName="firstName" autocomplete="off">
+    <mat-error *ngIf="form.get('firstName').invalid">Por favor ingrese un Nombre</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Apellidos" formControlName="lastName" autocomplete="off">
+      <mat-error *ngIf="form.get('lastName').invalid">Por favor ingrese Apellidos</mat-error>
+  </mat-form-field>
+  <button class="save" mat-stroked-button type="submit">Guardar Estudiante</button>
+</form>

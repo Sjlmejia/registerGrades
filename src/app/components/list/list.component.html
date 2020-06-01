@@ -1,0 +1,27 @@
+<h1 class="mat-display-1">Lista de Estudiantes</h1>
+<div class="container">
+  <div class="titles">
+    <div class="content">
+      Nombres
+    </div>
+    <div class="content">
+      Apellidos
+    </div>
+    <div class="content">
+      Nota final
+    </div>
+    <div class="content">
+      Acciones
+    </div>
+  </div>
+  <div *ngFor="let student of students" class="student">
+    <div class="content">{{student.firstName}}</div>
+    <div class="content">{{student.lastName}}</div>
+    <div class="content">{{getGrade(student.test, student.task)}}</div>
+    <div class="content">
+      <button mat-button [routerLink]="['/assign', student.id]" routerLinkActive="router-link-active" >
+        Asignar Calificaciones
+      </button>
+    </div>
+  </div>
+</div>

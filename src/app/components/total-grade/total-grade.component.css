@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+.title {
+  color:red;
+}
+
+.container-cards {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  margin: 15px;
+}
+
+.content {
+  padding-right: 5px;
+}
