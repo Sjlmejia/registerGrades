@@ -38,11 +38,9 @@ export class GenericService {
   }
 
   addStudent(firstName: string, lastName: string) {
-    console.log('entro aquisave');
     const studentData = {};
     studentData['firstName'] = firstName;
     studentData['lastName'] = lastName;
-    console.log('studdentData', studentData)
 
     this.http.post<{message: string, student: Student}>(
       'http://localhost:3000/api/students',

@@ -37,7 +37,6 @@ router.get('', (req, res, next) => {
 });
 
 router.put('/:id', (req, res, next) => {
-  console.log('reeqqqqqqqqqqq', req.body)
   const student = new Student({
     _id: req.body.id,
     test: req.body.test,
